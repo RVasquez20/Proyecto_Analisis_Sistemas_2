@@ -1,0 +1,44 @@
+﻿@model List<Panaderia.Models.UsuariosViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+@if(Model!=null){
+<div class="container mt-3">
+    <h2>Usuarios</h2>
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>Id_Usuario</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>Email</th>
+                <th>Usuario</th>
+                <th>Contraseña</th>
+                <th>Rol</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.id_usuario)</td>
+                    <td>@Html.DisplayFor(modelItem => item.nombre)</td>
+                    <td>@Html.DisplayFor(modelItem => item.apellido)</td>
+                    <td>@Html.DisplayFor(modelItem => item.direccion)</td>
+                    <td>@Html.DisplayFor(modelItem => item.email)</td>
+                    <td>@Html.DisplayFor(modelItem => item.users)</td>
+                    <td>@Html.DisplayFor(modelItem => item.pass)</td>
+                    <td>@Html.DisplayFor(modelItem => item.rol)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+}else{
+<div class="container mt-3">
+    <h2>No hay usuarios</h2>
+</div>
+}
+
