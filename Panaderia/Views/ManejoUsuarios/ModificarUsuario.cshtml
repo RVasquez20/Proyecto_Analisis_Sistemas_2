@@ -3,42 +3,105 @@
     ViewBag.Title = "Modificar Usuario";
     List<SelectListItem> roless = (List<SelectListItem>)ViewBag.roles;
 }
+<div class="container " style="margin-top:20px;">
+    @using (Html.BeginForm("Editar", "ManejoUsuarios", FormMethod.Post, new { role = "form", @class = "" }))
+    {<fieldset>
+     @Html.HiddenFor(m => m.id_usuario, new { @class = "form-control" })
+            <legend>Ingreso de Nuevo Usuario</legend>
+            <div class="form-group text-center">
+                @Html.LabelFor(m => m.nombre, new { @class = "col-md-1 control-label" })
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        @Html.TextBoxFor(m => m.nombre, new { @class = "form-control" })
 
-@using (Html.BeginForm("Editar", "ManejoUsuarios", FormMethod.Post, new { role = "form", @class = "" }))
-{
-    <div class="mb-3 mt-3">
-        @Html.HiddenFor(m => m.id_usuario)
-        @Html.AntiForgeryToken()
-    </div>
-    <div class="mb-3 mt-3">
-        @Html.LabelFor(m => m.nombre)
-        @Html.TextBoxFor(m => m.nombre, new { @class = "form-control" })
-    </div>
-    <div class="mb-3 mt-3">
-        @Html.LabelFor(m => m.apellido)
-        @Html.TextBoxFor(m => m.apellido, new { @class = "form-control" })
-    </div>
-    <div class="mb-3 mt-3">
-        @Html.LabelFor(m => m.direccion)
-        @Html.TextBoxFor(m => m.direccion, new { @class = "form-control" })
-    </div>
-    <div class="mb-3 mt-3">
-        @Html.LabelFor(m => m.email)
-        @Html.TextBoxFor(m => m.email, new { @class = "form-control" })
-    </div>
-    <div class="mb-3 mt-3">
-        @Html.LabelFor(m => m.users)
-        @Html.TextBoxFor(m => m.users, new { @class = "form-control" })
-    </div>
-    <div class="mb-3 mt-3">
-        @Html.LabelFor(m => m.pass)
-        @Html.TextBoxFor(m => m.pass, new { @class = "form-control" })
-    </div>
-    <div class="mb-3 mt-3">
-        @Html.LabelFor(m => m.rol)
-        @Html.DropDownList("Rol", roless, "Seleccionar un rol", new { @class = "form-control" })
-    </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
 
-    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-}
 
+            <div class="form-group">
+                @Html.LabelFor(m => m.apellido, new { @class = "col-md-1 control-label" })
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        @Html.TextBoxFor(m => m.apellido, new { @class = "form-control" })
+
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.direccion, new { @class = "col-md-1 control-label" })
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        @Html.TextBoxFor(m => m.direccion, new { @class = "form-control" })
+
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.email, new { @class = "col-md-1 control-label" })
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        @Html.TextBoxFor(m => m.email, new { @class = "form-control" })
+
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.users, new { @class = "col-md-1 control-label" })
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        @Html.TextBoxFor(m => m.users, new { @class = "form-control" })
+
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.pass, new { @class = "col-md-1 control-label" })
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        @Html.TextBoxFor(m => m.pass, new { @class = "form-control" })
+
+                    </div>
+                </div>
+            </div>
+            <br />
+            <br />
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.rol, new { @class = "col-md-1 control-label" })
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        @Html.DropDownList("Rol", roless, "Seleccionar un rol", new { @class = "form-control" })
+
+                    </div>
+                </div>
+            </div>
+            <br />
+
+
+            <br />
+            <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+        </fieldset>
+    }
+</div>
