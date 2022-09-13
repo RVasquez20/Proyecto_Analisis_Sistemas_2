@@ -6,7 +6,11 @@
 @if(Model!=null){
 <div class="container mt-3">
     <h2>Usuarios</h2>
-    <button type="button" class="btn btn-info" onclick=document.location.href='@Url.Content("~/ManejoUsuarios/AgregarUsuario")'>Nuevo</button>
+    <br />
+    <button type="button" class="btn btn-info" onclick="document.location.href ='@Url.Content("~/ManejoUsuarios/AgregarUsuario")'">
+        <span ><i class="glyphicon glyphicon-plus-sign"></i></span>
+        Nuevo Usuario
+    </button>
     <table class="table table-dark table-hover t-center">
         <thead>
             <tr class="text-center">
