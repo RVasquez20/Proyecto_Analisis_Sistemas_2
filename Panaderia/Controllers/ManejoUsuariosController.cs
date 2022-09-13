@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Panaderia.Services;
+using Panaderia.Models;
 
 namespace Panaderia.Controllers
 {
@@ -27,5 +28,75 @@ namespace Panaderia.Controllers
                 return View("Error");
             }
         }
+        public  ActionResult AgregarUsuario()
+        {
+                return View();
+            
+        }
+        [HttpPost]
+        public async Task<ActionResult> AgregarUsuario(UsuariosViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            try
+            {
+                await usuarioService.Agregar_Usuario(model);
+                return Redirect(Url.Content("~/ManejoUsuarios/"));
+            }
+            catch (Exception e)
+            {
+                return View("Error");
+            }
+        }
+        [HttpGet]
+        [Route("editar/(id)")]
+        public ActionResult ModificarUsuario(int id)
+        {
+            try
+            {
+                var result =  usuarioService.Buscar(id);
+                return View(result);
+            }
+            catch (Exception e)
+            {
+                return View("Error");
+            }
+        }
+    
+
+        [HttpPost]
+        public async Task<ActionResult> Editar(UsuariosViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            try
+            {
+                await usuarioService.Modificar_Usuario(model);
+                return Redirect(Url.Content("~/ManejoUsuarios/"));
+            }
+            catch (Exception e)
+            {
+                return View("Error");
+            }
+        }
+        [HttpGet]
+        [Route("eliminar/(id)")]
+        public async Task<ActionResult> EliminarUsuario(int id)
+        {
+            try
+            {
+                var result = await usuarioService.Eliminar_Usuario(id);
+                return Redirect(Url.Content("~/ManejoUsuarios/"));
+            }
+            catch (Exception e)
+            {
+                return View("Error");
+            }
+        }
+
     }
 }

@@ -293,6 +293,8 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\ManejoUsuarios\Index.cshtml" />
+    <Content Include="Views\ManejoUsuarios\AgregarUsuario.cshtml" />
+    <Content Include="Views\ManejoUsuarios\ModificarUsuario.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

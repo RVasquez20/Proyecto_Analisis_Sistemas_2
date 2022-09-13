@@ -1,0 +1,39 @@
+﻿@model Panaderia.Models.UsuariosViewModel
+@{
+    ViewBag.Title = "AgregarUsuario";
+}
+
+@using (Html.BeginForm("AgregarUsuario", "ManejoUsuarios", FormMethod.Post, new { role = "form", @class = "" }))
+{
+    <div class="mb-3 mt-3">
+        @Html.LabelFor(m => m.nombre)
+        @Html.TextBoxFor(m => m.nombre, new { @class = "form-control" })
+    </div>
+    <div class="mb-3 mt-3">
+        @Html.LabelFor(m => m.apellido)
+        @Html.TextBoxFor(m => m.apellido, new { @class = "form-control" })
+    </div>
+    <div class="mb-3 mt-3">
+        @Html.LabelFor(m => m.direccion)
+        @Html.TextBoxFor(m => m.direccion, new { @class = "form-control" })
+    </div>
+    <div class="mb-3 mt-3">
+        @Html.LabelFor(m => m.email)
+        @Html.TextBoxFor(m => m.email, new { @class = "form-control" })
+    </div>
+    <div class="mb-3 mt-3">
+        @Html.LabelFor(m => m.users)
+        @Html.TextBoxFor(m => m.users, new { @class = "form-control" })
+    </div>
+    <div class="mb-3 mt-3">
+        @Html.LabelFor(m => m.pass)
+        @Html.PasswordFor(m => m.pass, new { @class = "form-control" })
+    </div>
+    <div class="mb-3 mt-3">
+        @Html.LabelFor(m => m.id_rol)
+        @Html.TextBoxFor(m => m.id_rol, new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+}
+

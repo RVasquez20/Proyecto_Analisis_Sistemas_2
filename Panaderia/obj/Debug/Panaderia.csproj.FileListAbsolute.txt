@@ -125,3 +125,16 @@ C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panade
 C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\obj\Debug\Panaderia.pdb
 C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\System.Memory.dll
 C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\System.Buffers.dll
+C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\MySql.Data.dll
+C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\MySql.Data.EntityFramework.dll
+C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\MySql.Web.dll
+C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\Google.Protobuf.dll
+C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\ZstdNet.dll
+C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\BouncyCastle.Crypto.dll
+C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\Ubiety.Dns.Core.dll
+C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\K4os.Compression.LZ4.dll
+C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\K4os.Hash.xxHash.dll
+C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\MySql.Data.xml
+C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\MySql.Data.EntityFramework.xml
+C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\MySql.Web.xml
