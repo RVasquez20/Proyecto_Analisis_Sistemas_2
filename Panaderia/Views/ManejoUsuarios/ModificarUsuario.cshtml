@@ -1,6 +1,7 @@
 ﻿@model Panaderia.Models.UsuariosViewModel
 @{
     ViewBag.Title = "Modificar Usuario";
+    List<SelectListItem> roless = (List<SelectListItem>)ViewBag.roles;
 }
 
 @using (Html.BeginForm("Editar", "ManejoUsuarios", FormMethod.Post, new { role = "form", @class = "" }))
@@ -34,8 +35,8 @@
         @Html.TextBoxFor(m => m.pass, new { @class = "form-control" })
     </div>
     <div class="mb-3 mt-3">
-        @Html.LabelFor(m => m.id_rol)
-        @Html.TextBoxFor(m => m.id_rol, new { @class = "form-control" })
+        @Html.LabelFor(m => m.rol)
+        @Html.DropDownList("Rol", roless, "Seleccionar un rol", new { @class = "form-control" })
     </div>
 
     <button type="submit" class="btn btn-primary">Guardar Cambios</button>

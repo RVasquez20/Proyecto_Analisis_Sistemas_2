@@ -7,10 +7,10 @@
 <div class="container mt-3">
     <h2>Usuarios</h2>
     <button type="button" class="btn btn-info" onclick=document.location.href='@Url.Content("~/ManejoUsuarios/AgregarUsuario")'>Nuevo</button>
-    <table class="table table-dark table-hover">
+    <table class="table table-dark table-hover t-center">
         <thead>
-            <tr>
-                <th>Id_Usuario</th>
+            <tr class="text-center">
+
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Direccion</th>
@@ -18,13 +18,14 @@
                 <th>Usuario</th>
                 <th>Contraseña</th>
                 <th>Rol</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>@item.id_usuario</td>
+                <tr data-id_usuario="'@item.id_usuario'">
+                    
                     <td>@item.nombre</td>
                     <td>@item.apellido</td>
                     <td>@item.direccion</td>
@@ -33,7 +34,7 @@
                     <td>@item.pass</td>
                     <td>@item.rol</td>
                     <td>
-                        <input onclick="document.location.href='@Url.Content("~/ManejoUsuarios/EliminarUsuario/" + item.id_usuario)'" type="button" value="Eliminar" class="btn btn-danger" />
+                        <input onclick="document.location.href='@Url.Content("~/ManejoUsuarios/EliminarUsuario/" + item.id_usuario)'" type="button" value="Eliminar" class="btn btn-danger" />&nbsp;
                     <input onclick="document.location.href='@Url.Content("~/ManejoUsuarios/ModificarUsuario/" + item.id_usuario)'" type="button" value="Editar" class="btn btn-default" /></td>
                 </tr>
             }
@@ -45,18 +46,5 @@
     <h2>No hay usuarios</h2>
 </div>
 }
-<script>
-    function EliminarUsuario(id) {
-        if (confirm("Esta Seguro de Eliminar A Este Usuario?????")) {
-            url = "@Url.Content("~/ManejoUsuarios/EliminarUsuario")" + "/" + id;
-            $.post(url, (data) => {
-                if (data == 1) {
-                    document.location.href = "@Url.Content("~/ManejoUsuarios/")"
-                } else {
-                    alert("Ocurrio un Error :c")
-                }
-            })
-        }
-    }
-</script>
+
 
