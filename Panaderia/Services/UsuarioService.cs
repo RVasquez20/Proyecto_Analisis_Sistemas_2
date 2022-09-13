@@ -22,7 +22,7 @@ namespace Panaderia.Services
                 usuario.email = model.email;
                 usuario.users = model.users;
                 usuario.pass = model.pass;
-                usuario.id_rol = model.id_rol;
+                usuario.id_rol = int.Parse(model.rol);
                 dataBase.Usuario.Add(usuario);
                 dataBase.SaveChanges();
                 return usuario;
@@ -59,6 +59,55 @@ namespace Panaderia.Services
 
         }
 
+        public List<SelectListItem> Listar_Roles()
+        {
+            using (dbPanaderia dataBase = new dbPanaderia())
+            {
+                var lista = dataBase.Roles.ToList();
+                List<SelectListItem> items = lista.ConvertAll(d =>
+                {
+                    return new SelectListItem()
+                    {
+                        Text = d.rol.ToString(),
+                        Value = d.id_rol.ToString(),
+                        Selected = false
+                    };
+                });
+                return items;
+            }
+        }
+        public List<SelectListItem> Listar_RolesEdit(int id_rol)
+        {
+            using (dbPanaderia dataBase = new dbPanaderia())
+            {
+                var lista = dataBase.Roles.ToList();
+                List<SelectListItem> items = lista.ConvertAll(d =>
+                {
+                   
+                        if (d.id_rol != id_rol) {
+                            return new SelectListItem()
+                            {
+                                Text = d.rol.ToString(),
+                                Value = d.id_rol.ToString(),
+                                Selected = false
+                            };
+                        }
+                        else
+                        {
+                            return new SelectListItem()
+                            {
+                                Text = d.rol.ToString(),
+                                Value = d.id_rol.ToString(),
+                                Selected = true
+                            };
+
+                        }
+                    
+                });
+                return items;
+            }
+        }
+
         public async Task<List<UsuariosViewModel>> Listar_Usuarios()
         {
             using (dbPanaderia dataBase=new dbPanaderia())
@@ -93,7 +142,7 @@ namespace Panaderia.Services
                 result.email = model.email;
                 result.users = model.users;
                 result.pass = model.pass;
-                result.id_rol = model.id_rol;
+                result.id_rol = int.Parse(model.rol);
                 dataBase.Entry(result).State = System.Data.Entity.EntityState.Modified;
                 dataBase.SaveChanges();
                 return result;

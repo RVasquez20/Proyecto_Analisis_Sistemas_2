@@ -30,7 +30,9 @@ namespace Panaderia.Controllers
         }
         public  ActionResult AgregarUsuario()
         {
-                return View();
+            var listadoRoles = usuarioService.Listar_Roles();
+            ViewBag.roles = listadoRoles;
+            return View();
             
         }
         [HttpPost]
@@ -57,6 +59,8 @@ namespace Panaderia.Controllers
             try
             {
                 var result =  usuarioService.Buscar(id);
+                var listadoRoles = usuarioService.Listar_RolesEdit(result.id_rol);
+                ViewBag.roles = listadoRoles;
                 return View(result);
             }
             catch (Exception e)
