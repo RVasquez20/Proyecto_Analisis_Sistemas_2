@@ -138,3 +138,4 @@ C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panade
 C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\MySql.Data.xml
 C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\MySql.Data.EntityFramework.xml
 C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\MySql.Web.xml
+C:\Users\jamay\OneDrive\Escritorio\analisis2\Proyecto_Analisis_Sistemas_2\Panaderia\bin\System.Numerics.Vectors.dll
