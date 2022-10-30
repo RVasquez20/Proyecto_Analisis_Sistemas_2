@@ -11341,11 +11341,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\blitxy\\Documents\\GitHub\\ApiNetPanaderia\\ApiNetPanaderia.csproj",
+      "projectUniqueName": "C:\\Users\\blitxy\\Documents\\GitHub\\Proyecto_Analisis_Sistemas_2\\ApiNetPanaderia\\ApiNetPanaderia.csproj",
       "projectName": "ApiNetPanaderia",
-      "projectPath": "C:\\Users\\blitxy\\Documents\\GitHub\\ApiNetPanaderia\\ApiNetPanaderia.csproj",
+      "projectPath": "C:\\Users\\blitxy\\Documents\\GitHub\\Proyecto_Analisis_Sistemas_2\\ApiNetPanaderia\\ApiNetPanaderia.csproj",
       "packagesPath": "C:\\Users\\blitxy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\blitxy\\Documents\\GitHub\\ApiNetPanaderia\\obj\\",
+      "outputPath": "C:\\Users\\blitxy\\Documents\\GitHub\\Proyecto_Analisis_Sistemas_2\\ApiNetPanaderia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\blitxy\\AppData\\Roaming\\NuGet\\NuGet.Config",

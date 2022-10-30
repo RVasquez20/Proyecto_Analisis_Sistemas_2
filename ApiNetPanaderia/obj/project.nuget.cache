@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uVNDmt7cmjGv7d6HeQWYccu8B6l4dQFYcShdUsswkusTEVKsa/+RJ8nWg/bF04P0B2cERdHyNyjoqyxs/asxIw==",
+  "dgSpecHash": "qBwBuPVmsGY/sC/WdJp1RlRdZQeuV/bCa0vxFv+tk5jS99LZUkjs/SQCuXQuztZ8W1ugwkeqycC+g0SAX6R3rA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\blitxy\\Documents\\GitHub\\ApiNetPanaderia\\ApiNetPanaderia.csproj",
+  "projectFilePath": "C:\\Users\\blitxy\\Documents\\GitHub\\Proyecto_Analisis_Sistemas_2\\ApiNetPanaderia\\ApiNetPanaderia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\blitxy\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\blitxy\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

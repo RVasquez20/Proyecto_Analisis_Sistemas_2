@@ -11,47 +11,47 @@ namespace ApiNetPanaderia.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmpleadosController : ControllerBase
+    public class ClientesController : ControllerBase
     {
         private readonly Panaderia_ElBuenPanContext _context;
 
-        public EmpleadosController(Panaderia_ElBuenPanContext context)
+        public ClientesController(Panaderia_ElBuenPanContext context)
         {
             _context = context;
         }
 
-        // GET: api/Empleados
+        // GET: api/Clientes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Empleado>>> GetEmpleados()
+        public async Task<ActionResult<IEnumerable<Cliente>>> GetClientes()
         {
-            return await _context.Empleados.ToListAsync();
+            return await _context.Clientes.ToListAsync();
         }
 
-        // GET: api/Empleados/5
+        // GET: api/Clientes/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Empleado>> GetEmpleado(int id)
+        public async Task<ActionResult<Cliente>> GetCliente(int id)
         {
-            var empleado = await _context.Empleados.FindAsync(id);
+            var cliente = await _context.Clientes.FindAsync(id);
 
-            if (empleado == null)
+            if (cliente == null)
             {
                 return NotFound();
             }
 
-            return empleado;
+            return cliente;
         }
 
-        // PUT: api/Empleados/5
+        // PUT: api/Clientes/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutEmpleado(int id, Empleado empleado)
+        public async Task<IActionResult> PutCliente(int id, Cliente cliente)
         {
-            if (id != empleado.IdEmpleado)
+            if (id != cliente.IdCliente)
             {
                 return BadRequest();
             }
 
-            _context.Entry(empleado).State = EntityState.Modified;
+            _context.Entry(cliente).State = EntityState.Modified;
 
             try
             {
@@ -59,7 +59,7 @@ namespace ApiNetPanaderia.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!EmpleadoExists(id))
+                if (!ClienteExists(id))
                 {
                     return NotFound();
                 }
@@ -72,36 +72,36 @@ namespace ApiNetPanaderia.Controllers
             return NoContent();
         }
 
-        // POST: api/Empleados
+        // POST: api/Clientes
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Empleado>> PostEmpleado(Empleado empleado)
+        public async Task<ActionResult<Cliente>> PostCliente(Cliente cliente)
         {
-            _context.Empleados.Add(empleado);
+            _context.Clientes.Add(cliente);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetEmpleado", new { id = empleado.IdEmpleado }, empleado);
+            return CreatedAtAction("GetCliente", new { id = cliente.IdCliente }, cliente);
         }
 
-        // DELETE: api/Empleados/5
+        // DELETE: api/Clientes/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteEmpleado(int id)
+        public async Task<IActionResult> DeleteCliente(int id)
         {
-            var empleado = await _context.Empleados.FindAsync(id);
-            if (empleado == null)
+            var cliente = await _context.Clientes.FindAsync(id);
+            if (cliente == null)
             {
                 return NotFound();
             }
 
-            _context.Empleados.Remove(empleado);
+            _context.Clientes.Remove(cliente);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool EmpleadoExists(int id)
+        private bool ClienteExists(int id)
         {
-            return _context.Empleados.Any(e => e.IdEmpleado == id);
+            return _context.Clientes.Any(e => e.IdCliente == id);
         }
     }
 }

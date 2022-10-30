@@ -16,7 +16,7 @@ namespace ApiNetPanaderia.Models
         {
         }
 
-        public virtual DbSet<Empleado> Empleados { get; set; } = null!;
+        public virtual DbSet<Cliente> Clientes { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -28,37 +28,34 @@ namespace ApiNetPanaderia.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Empleado>(entity =>
+            modelBuilder.Entity<Cliente>(entity =>
             {
-                entity.HasKey(e => e.IdEmpleado);
+                entity.HasKey(e => e.IdCliente);
 
-                entity.Property(e => e.IdEmpleado).HasColumnName("Id_Empleado");
+                entity.Property(e => e.IdCliente).HasColumnName("id_Cliente");
 
                 entity.Property(e => e.Apellidos)
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Direccion)
+                entity.Property(e => e.CorreoElectronico)
                     .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .IsUnicode(false)
+                    .HasColumnName("Correo_Electronico");
 
                 entity.Property(e => e.FechaIngreso)
                     .HasColumnType("date")
                     .HasColumnName("Fecha_Ingreso");
 
-                entity.Property(e => e.FechaInicioLabores)
-                    .HasColumnType("date")
-                    .HasColumnName("Fecha_Inicio_Labores");
-
-                entity.Property(e => e.FechaNacimiento)
-                    .HasColumnType("date")
-                    .HasColumnName("Fecha_Nacimiento");
-
-                entity.Property(e => e.Genero)
+                entity.Property(e => e.Nit)
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Nombres)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Telefono)
                     .HasMaxLength(50)
                     .IsUnicode(false);
             });
