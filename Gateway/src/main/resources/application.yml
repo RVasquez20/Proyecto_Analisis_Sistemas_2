@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+      routes:
+        - id: APICLIENTES
+          uri: lb://APICLIENTES
+          predicates:
+            - Path=/Clientes/**
+
+        - id: api-usuarios
+          uri: lb://api-usuarios
+          predicates:
+            - Path=/infoUsuarios/**
+
+        - id: NODE-EMPLEADOS-API
+          uri: lb://NODE-EMPLEADOS-API
+          predicates:
+            - Path=/Empleados/**
